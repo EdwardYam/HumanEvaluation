@@ -92,7 +92,7 @@ function score(score_value){
 }
 
 function save(){
-
+    var file_name = prompt("Filename:", "");
     var data = document.getElementById('data').value;
     var lines = data.split("&");
     var tag_result = new Array();
@@ -103,7 +103,7 @@ function save(){
     last_index = lines.length - 1
     lines[last_index] = lines[i].replace(new RegExp("&", "gm"), "");
     tag_result.push(lines[last_index]);
-    var new_file = new File(tag_result, "A1.csv", { type: "text/plain;charset=utf-8" });
+    var new_file = new File(tag_result, file_name, { type: "text/plain;charset=utf-8" });
     saveAs(new_file);
 }
 
