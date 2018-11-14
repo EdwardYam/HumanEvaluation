@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Human Evaluation</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 引入 Bootstrap -->
+      <link href="bootstrap-4/css/bootstrap.min.css" rel="stylesheet">
+      <link href="bootstrap-4/css/bootstrap-theme.min.css" rel="stylesheet">
+      <script src="bootstrap-4/js/jquery-2.1.4.js"></script>
+      <script src="bootstrap-4/js/bootstrap.min.js"></script>
+      <script src="js/main.js"></script>
+
+      <link href="css/main.css" rel="stylesheet">
+   </head>
+   <div class="context-div">
+        <table class="table table-bordered table-hover table-striped table-responsive main-table" style="margin:0 auto;">
+            <tr>
+                <th class="table-td-1">Context</th>
+                <td class="table-td-2" id="context">I am a student I am a student I am a student I am a student I am a student I am a student I am a student I am a student I am a student I am a student</td>
+            </tr>
+            <tr>
+                <th class="table-td-1">Post</th>
+                <td class="table-td-2" id="post">I am a student</td>
+            </tr>
+            <tr>
+                <th class="table-td-1">Response</th>
+                <td class="table-td-2" id="response">I am a student</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="score-btn-div">
+        <span class="score-btn-span">
+            <button type="button" class="btn btn-info score-btn" onclick="score(0)" style="cursor:pointer;">0</button>
+        </span>
+        <span class="score-btn-span">
+            <button type="button" class="btn btn-info score-btn" onclick="score(1)" style="cursor:pointer;">1</button>
+        </span>
+        <span class="score-btn-span">
+            <button type="button" class="btn btn-info score-btn" onclick="score(2)" style="cursor:pointer;">2</button>
+        </span>
+    </div>
+
+    <hr/>
+
+    <div class="page-btn-div">
+        <span class="page-btn-span">
+            <button id="previous-btn" type="button" class="btn btn-success page-btn" onclick="previous()" style="cursor:pointer;">previous</button>
+        </span>
+        <span id="page-span" class="page-span">
+            1/1
+        </span>
+        <span class="page-btn-span">
+            <button id="next-btn" type="button" class="btn btn-success page-btn" onclick="next()" style="cursor:pointer;">next</button>
+        </span>
+    </div>
+
+    <hr/>
+
+    <div class="oper-btn-div">
+        <span class="upload-span">
+            <input class="btn" type="file" name="fileUpload" id="upload_files"/>
+            <input id="submit-btn" class="btn btn-primary" type="submit" value="submit" onclick="upload()" style="cursor:pointer;"/>
+        </span>
+        <span class="save-btn-span">
+            <button type="button" class="btn btn-danger" onclick="save()" style="cursor:pointer;">save</button>
+        </span>
+    </div>
+
+    <div style="display:none;">
+        <input type="text" name="text" id="lines_id"/>
+    </div>
+    <div style="display:none;">
+        <input type="text" name="data" id="data"/>
+    </div>
+</html>

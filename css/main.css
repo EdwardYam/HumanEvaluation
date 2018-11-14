@@ -1,0 +1,63 @@
+.context-div{
+    margin:50px auto 0px auto;
+}
+
+.main-table{
+    margin:0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+    width:1200px;
+}
+
+.table-td-1{
+    width: 200px;
+}
+
+.table-td-2{
+    width: 1000px;
+}
+
+.score-btn-div{
+    margin:30px auto 0px auto;
+    text-align:center;
+}
+
+.score-btn-span{
+    margin:0px 10px 0px 10px;
+}
+
+.score-btn{
+    width: 50px;
+}
+
+.page-btn-div{
+    text-align: center;
+    margin:30px auto 0px auto;
+}
+
+.page-btn-span{
+    margin:0px 30px 0px 30px;
+}
+
+.save-btn-span{
+    margin:0px 100px 0px 50px;
+}
+
+.page-btn{
+    width: 100px;
+}
+
+.page-span{
+    width: 100px;
+    margin: 0px 0px 0px 0px;
+    font-size: 20px;
+}
+
+.upload-span{
+    margin: 0px auto 0px 150px;
+    font-size: 20px;
+}
+
+.oper-btn-div{
+    margin:30px auto 0px auto;
+    text-align: center;
+}
