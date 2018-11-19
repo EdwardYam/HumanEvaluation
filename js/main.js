@@ -92,7 +92,7 @@ function score(score_value){
 }
 
 function save(){
-    var file_name = prompt("Filename:", "");
+    var file_name = prompt("Filename:", ".csv");
     var data = document.getElementById('data').value;
     var lines = data.split("&");
     var tag_result = new Array();
