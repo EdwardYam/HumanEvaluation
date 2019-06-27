@@ -162,7 +162,6 @@ function score2(score_value, pos){
             document.getElementById('response').innerText = line[2];
             document.getElementById('lines_id').value = id;
             document.getElementById('page-span').innerText = (id + 1).toString() + "/" + (lines.length - 1).toString();
-
             for (i = 0; i < 4; i++) { 
                 info_btn_list[i].classList.add("btn-info");
                 info_btn_list[i].classList.remove("btn-warning");
