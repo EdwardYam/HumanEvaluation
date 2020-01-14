@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Human Evaluation</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 引入 Bootstrap -->
+      <link href="css/bootstrap-4/css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/bootstrap-4/css/bootstrap-theme.min.css" rel="stylesheet">
+      <script src="css/bootstrap-4/js/jquery-2.1.4.js"></script>
+      <script src="css/bootstrap-4/js/bootstrap.min.js"></script>
+      <script src="js/main.js"></script>
+
+      <link href="css/main.css" rel="stylesheet">
+   </head>
+   <div class="context-div">
+        <table class="table table-bordered table-hover table-striped table-responsive main-table" style="margin:0 auto;">
+            <tr>
+                <th class="table-td-1">Conversation Context</th>
+                <td class="table-td-2" id="context"></td>
+            </tr>
+            <tr style="display:none;">
+                <th class="table-td-1">Candidate Response</th>
+                <td class="table-td-2" id="post"></td>
+            </tr>
+            <tr>
+                <th class="table-td-1">Generated Result</th>
+                <td class="table-td-2" id="response"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="score-btn-div">
+        Fluency
+        <span class="score-btn-span" style="display:none;">
+            <button id="flu-btn-0" type="button" class="btn btn-info score-btn" onclick="score3(-1, 0)" style="cursor:pointer;">-1</button>
+        </span>
+        <span class="score-btn-span">
+            <button id="flu-btn-1" type="button" class="btn btn-info score-btn" onclick="score3(0, 0)" style="cursor:pointer;">0</button>
+        </span>
+        <span class="score-btn-span">
+            <button id="flu-btn-2" type="button" class="btn btn-info score-btn" onclick="score3(1, 0)" style="cursor:pointer;">1</button>
+        </span>
+        <span class="score-btn-span">
+            <button id="flu-btn-3" type="button" class="btn btn-info score-btn" onclick="score3(2, 0)" style="cursor:pointer;">2</button>
+        </span>
+    </div>
+
+    <div class="score-btn-div">
+        Informative
+            <span class="score-btn-span" style="display:none;">
+                <button id="info-btn-0" type="button" class="btn btn-info score-btn" onclick="score3(-1, 1)" style="cursor:pointer;">-1</button>
+            </span>
+            <span class="score-btn-span">
+                <button id="info-btn-1" type="button" class="btn btn-info score-btn" onclick="score3(0, 1)" style="cursor:pointer;">0</button>
+            </span>
+            <span class="score-btn-span">
+                <button id="info-btn-2" type="button" class="btn btn-info score-btn" onclick="score3(1, 1)" style="cursor:pointer;">1</button>
+            </span>
+            <span class="score-btn-span">
+                <button id="info-btn-3" type="button" class="btn btn-info score-btn" onclick="score3(2, 1)" style="cursor:pointer;">2</button>
+            </span>
+        </div>
+
+        <div class="score-btn-div">
+            Relevance
+            <span class="score-btn-span" style="display:none;">
+                <button id="rele-btn-0" type="button" class="btn btn-info score-btn" onclick="score3(-1, 2)" style="cursor:pointer;">-1</button>
+            </span>
+            <span class="score-btn-span">
+                <button id="rele-btn-1" type="button" class="btn btn-info score-btn" onclick="score3(0, 2)" style="cursor:pointer;">0</button>
+            </span>
+            <span class="score-btn-span">
+                <button id="rele-btn-2" type="button" class="btn btn-info score-btn" onclick="score3(1, 2)" style="cursor:pointer;">1</button>
+            </span>
+            <span class="score-btn-span">
+                <button id="rele-btn-3" type="button" class="btn btn-info score-btn" onclick="score3(2, 2)" style="cursor:pointer;">2</button>
+            </span>
+        </div>
+
+    <hr/>
+
+    <div class="page-btn-div">
+        <span class="page-btn-span">
+            <button id="previous-btn" type="button" class="btn btn-success page-btn" onclick="previous()" style="cursor:pointer;">previous</button>
+        </span>
+        <span id="page-span" class="page-span">
+            1/1
+        </span>
+        <span class="page-btn-span">
+            <button id="next-btn" type="button" class="btn btn-success page-btn" onclick="next()" style="cursor:pointer;">next</button>
+        </span>
+    </div>
+
+    <hr/>
+
+    <div class="oper-btn-div">
+        <span class="upload-span">
+            <input class="btn" type="file" name="fileUpload" id="upload_files"/>
+            <input id="submit-btn" class="btn btn-primary" type="submit" value="submit" onclick="upload()" style="cursor:pointer;"/>
+        </span>
+        <span class="save-btn-span">
+            <button type="button" class="btn btn-danger" onclick="save()" style="cursor:pointer;">save</button>
+        </span>
+    </div>
+
+    <div style="display:none;">
+        <input type="text" name="text" id="lines_id"/>
+    </div>
+    <div style="display:none;">
+        <input type="text" name="data" id="data"/>
+    </div>
+</html>
